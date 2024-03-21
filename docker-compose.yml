@@ -11,6 +11,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     restart: on-failure
+
   mysqldb:
     image: mysql:latest
     restart: always
@@ -19,8 +20,6 @@ services:
     volumes:
       - ./store/:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=invinitivePortfolio
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=12345
-  
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: invinitivePortfolio
+      MYSQL_PASSWORD: 12345
