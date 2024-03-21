@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  api:
+  invinitive.api:
     container_name: invinitive-api
     build:
       context: .
@@ -11,5 +11,16 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     restart: on-failure
+  mysqldb:
+    image: mysql:latest
+    restart: always
+    ports:
+      - "3306:3306"
     volumes:
-      - ./src/Invinitive.Api/Invinitive.sqlite:/app/Invinitive.sqlite
+      - ./store/:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=invinitivePortfolio
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=12345
+  

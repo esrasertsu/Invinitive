@@ -1,6 +1,7 @@
 using Invinitive.Api;
 using Invinitive.Application;
 using Invinitive.Infrastructure;
+using Invinitive.Infrastructure.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 {
@@ -19,6 +20,7 @@ var app = builder.Build();
     {
         app.UseSwagger();
         app.UseSwaggerUI();
+        app.ApplyMigrations();
     }
 
     app.UseHttpsRedirection();

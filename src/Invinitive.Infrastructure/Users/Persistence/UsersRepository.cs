@@ -2,8 +2,6 @@ using Invinitive.Application.Common.Interfaces;
 using Invinitive.Domain.Users;
 using Invinitive.Infrastructure.Common;
 
-using Microsoft.EntityFrameworkCore;
-
 namespace Invinitive.Infrastructure.Users.Persistence;
 
 public class UsersRepository(AppDbContext _dbContext) : IUsersRepository

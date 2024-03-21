@@ -1,5 +1,4 @@
 using Invinitive.Domain.Users;
-using Invinitive.Infrastructure.Common.Persistence;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
