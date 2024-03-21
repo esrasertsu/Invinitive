@@ -1,8 +1,6 @@
 using Invinitive.Api;
 using Invinitive.Application;
 using Invinitive.Infrastructure;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
 {

@@ -11,6 +11,7 @@
 	  <PackageReference Include="Microsoft.Extensions.Configuration.Binder" />
 	  <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
 	  <PackageReference Include="Microsoft.Extensions.Identity.Core" />
+	  <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" />
 	  <PackageReference Include="System.IdentityModel.Tokens.Jwt" />
 	</ItemGroup>
 

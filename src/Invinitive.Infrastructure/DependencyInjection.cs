@@ -23,7 +23,7 @@ public static class DependencyInjection
             .AddBackgroundServices(configuration)
             .AddAuthentication(configuration)
             .AddAuthorization()
-            .AddPersistence();
+            .AddPersistence(configuration);
 
         return services;
     }
@@ -38,10 +38,13 @@ public static class DependencyInjection
         return services;
     }
 
-    private static IServiceCollection AddPersistence(this IServiceCollection services)
+    private static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddDbContext<AppDbContext>(options => options.UseSqlite("Data Source = Invinitive.sqlite"));
-
+        services.AddDbContextPool<AppDbContext>(options =>
+        {
+            var connetionString = configuration.GetConnectionString("MysqlDatabase");
+            options.UseMySql(connetionString, ServerVersion.AutoDetect(connetionString));
+        });
         services.AddScoped<IUsersRepository, UsersRepository>();
 
         return services;
