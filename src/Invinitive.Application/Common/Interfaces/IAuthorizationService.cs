@@ -1,5 +1,5 @@
-using Invinitive.Application.Common.Security.Request;
 using ErrorOr;
+using Invinitive.Application.Common.Security.Request;
 
 namespace Invinitive.Application.Common.Interfaces;
 

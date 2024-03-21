@@ -1,7 +1,8 @@
 using System.Reflection;
+
+using ErrorOr;
 using Invinitive.Application.Common.Interfaces;
 using Invinitive.Application.Common.Security.Request;
-using ErrorOr;
 using MediatR;
 
 namespace Invinitive.Application.Common.Behaviors;

@@ -1,7 +1,7 @@
-using Invinitive.Application.Common.Interfaces;
 using ErrorOr;
-using MediatR;
+using Invinitive.Application.Common.Interfaces;
 using Invinitive.Application.Tokens.Responses;
+using MediatR;
 
 namespace Invinitive.Application.Tokens.Queries.Generate;
 

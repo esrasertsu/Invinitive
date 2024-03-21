@@ -1,5 +1,5 @@
-using Invinitive.Application.Common.Behaviors;
 using FluentValidation;
+using Invinitive.Application.Common.Behaviors;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Invinitive.Application;

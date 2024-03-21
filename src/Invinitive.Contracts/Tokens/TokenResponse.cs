@@ -1,4 +1,4 @@
-namespace CleanArchitecture.Contracts.Tokens;
+namespace Invinitive.Contracts.Tokens;
 
 public record TokenResponse(
     Guid Id,

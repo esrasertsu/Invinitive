@@ -1,11 +1,9 @@
-using CleanArchitecture.Contracts.Tokens;
 using Invinitive.Application.Tokens.Queries;
 using Invinitive.Application.Tokens.Responses;
 using Invinitive.Contracts.Tokens;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace Invinitive.Api.Controllers;
 

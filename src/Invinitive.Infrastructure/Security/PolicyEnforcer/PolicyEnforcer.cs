@@ -1,9 +1,8 @@
+using ErrorOr;
 using Invinitive.Application.Common.Security.Policies;
 using Invinitive.Application.Common.Security.Request;
 using Invinitive.Application.Common.Security.Roles;
 using Invinitive.Infrastructure.Security.CurrentUserProvider;
-
-using ErrorOr;
 
 namespace Invinitive.Infrastructure.Security.PolicyEnforcer;
 

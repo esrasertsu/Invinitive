@@ -1,5 +1,4 @@
 using Invinitive.Domain.Common;
-//using Invinitive.Domain.Reminders;
 using Invinitive.Domain.Users;
 using Invinitive.Infrastructure.Common.Middleware;
 
@@ -12,8 +11,6 @@ namespace Invinitive.Infrastructure.Common;
 
 public class AppDbContext(DbContextOptions options, IHttpContextAccessor _httpContextAccessor, IPublisher _publisher) : DbContext(options)
 {
-  //  public DbSet<Reminder> Reminders { get; set; } = null!;
-
     public DbSet<User> Users { get; set; } = null!;
 
     public async override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

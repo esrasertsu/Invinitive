@@ -1,4 +1,5 @@
 ﻿using Invinitive.Application.Common.Interfaces;
+using Invinitive.Infrastructure.Common;
 using Invinitive.Infrastructure.Security;
 using Invinitive.Infrastructure.Security.CurrentUserProvider;
 using Invinitive.Infrastructure.Security.PolicyEnforcer;
@@ -39,7 +40,7 @@ public static class DependencyInjection
 
     private static IServiceCollection AddPersistence(this IServiceCollection services)
     {
-        //services.AddDbContext<AppDbContext>(options => options.UseSqlite("Data Source = Invinitive.sqlite"));
+        services.AddDbContext<AppDbContext>(options => options.UseSqlite("Data Source = Invinitive.sqlite"));
 
         services.AddScoped<IUsersRepository, UsersRepository>();
 

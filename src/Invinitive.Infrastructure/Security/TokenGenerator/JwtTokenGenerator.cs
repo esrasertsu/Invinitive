@@ -1,10 +1,7 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-
 using Invinitive.Application.Common.Interfaces;
-using Invinitive.Domain.Users;
-
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
