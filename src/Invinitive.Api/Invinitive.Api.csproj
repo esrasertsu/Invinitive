@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<IsPackable>true</IsPackable>
+		<UserSecretsId>1f702741-6795-485e-988c-f6853216d5fb</UserSecretsId>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.3" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Invinitive.Contracts\Invinitive.Contracts.csproj" />
+		<ProjectReference Include="..\Invinitive.Application\Invinitive.Application.csproj" />
+		<ProjectReference Include="..\Invinitive.Infrastructure\Invinitive.Infrastructure.csproj" />
+	</ItemGroup>
+
+</Project>
