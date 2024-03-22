@@ -40,10 +40,10 @@ public static class DependencyInjection
 
     private static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddDbContextPool<AppDbContext>(options =>
+        services.AddDbContext<AppDbContext>(options =>
         {
-            var connetionString = configuration.GetConnectionString("MysqlDatabase");
-            options.UseMySql(connetionString, ServerVersion.AutoDetect(connetionString));
+            var connectionString = configuration.GetConnectionString("MysqlDatabase");
+            options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
         });
         services.AddScoped<IUsersRepository, UsersRepository>();
 
