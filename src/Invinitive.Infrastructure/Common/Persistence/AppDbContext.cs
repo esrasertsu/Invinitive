@@ -1,4 +1,6 @@
 using Invinitive.Domain.Common;
+using Invinitive.Domain.Managers;
+using Invinitive.Domain.Portfolios;
 using Invinitive.Domain.Users;
 using Invinitive.Infrastructure.Common.Middleware;
 
@@ -12,6 +14,10 @@ namespace Invinitive.Infrastructure.Common;
 public class AppDbContext(DbContextOptions options, IHttpContextAccessor _httpContextAccessor, IPublisher _publisher) : DbContext(options)
 {
     public DbSet<User> Users { get; set; } = null!;
+
+    public DbSet<Manager> Managers { get; set; } = null!;
+
+    public DbSet<Portfolio> Portfolios { get; set; } = null!;
 
     public async override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {
