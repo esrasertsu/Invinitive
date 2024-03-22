@@ -1,5 +1,6 @@
 ﻿using Invinitive.Application.Common.Interfaces;
 using Invinitive.Infrastructure.Common;
+using Invinitive.Infrastructure.Portfolios.Persistence;
 using Invinitive.Infrastructure.Security;
 using Invinitive.Infrastructure.Security.CurrentUserProvider;
 using Invinitive.Infrastructure.Security.PolicyEnforcer;
@@ -46,6 +47,7 @@ public static class DependencyInjection
             options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
         });
         services.AddScoped<IUsersRepository, UsersRepository>();
+        services.AddScoped<IPortfolioRepository, PortfolioRepository>();
 
         return services;
     }

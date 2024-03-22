@@ -7,7 +7,7 @@ public class Manager
     public int? ReportsTo { get; private set; }
     public Manager? ReportsToManager { get; private set; }
 
-    public Manager(string? name, int? reportsTo)
+    public Manager(string? name, int? reportsTo = null)
     {
         Name = name ?? throw new ArgumentNullException(nameof(name));
         ReportsTo = reportsTo;
