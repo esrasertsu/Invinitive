@@ -1,10 +1,13 @@
 using Invinitive.Application.Portfolios.Commands;
 using MediatR;
+
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Invinitive.Api.Controllers;
 
 [Route("{userId:guid}/portfolios")]
+[AllowAnonymous]
 public class PortfoliosController(ISender _mediator) : ApiController
 {
     [HttpPost]

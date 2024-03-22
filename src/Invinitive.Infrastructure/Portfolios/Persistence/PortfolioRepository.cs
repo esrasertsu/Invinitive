@@ -2,6 +2,8 @@
 using Invinitive.Domain.Portfolios;
 using Invinitive.Infrastructure.Common;
 
+using Microsoft.EntityFrameworkCore;
+
 namespace Invinitive.Infrastructure.Portfolios.Persistence;
 
 public class PortfolioRepository(AppDbContext _dbContext) : IPortfolioRepository
@@ -14,6 +16,6 @@ public class PortfolioRepository(AppDbContext _dbContext) : IPortfolioRepository
 
     public async Task<Portfolio?> GetByNameAsync(string name, CancellationToken cancellationToken)
     {
-        return await _dbContext.Portfolios.FindAsync(name, cancellationToken);
+        return await _dbContext.Portfolios.FirstOrDefaultAsync(m => m.Name == name, cancellationToken);
     }
 }

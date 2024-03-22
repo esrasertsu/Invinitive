@@ -11,7 +11,7 @@ public class PortfolioConfigurations : IEntityTypeConfiguration<Portfolio>
         builder.HasKey(p => p.Id);
 
         builder.Property(p => p.Id)
-            .ValueGeneratedNever();
+             .ValueGeneratedOnAdd();
 
         builder.Property(p => p.Name)
             .IsRequired(); // Assuming Name is required

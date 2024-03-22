@@ -11,7 +11,7 @@ namespace Invinitive.Infrastructure.Managers.Persistence;
         builder.HasKey(m => m.Id);
 
         builder.Property(m => m.Id)
-            .ValueGeneratedNever();
+             .ValueGeneratedOnAdd();
 
         builder.Property(m => m.Name)
             .IsRequired();

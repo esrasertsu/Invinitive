@@ -45,6 +45,7 @@ public static class DependencyInjection
         {
             var connectionString = configuration.GetConnectionString("MysqlDatabase");
             options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+            options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
         });
         services.AddScoped<IUsersRepository, UsersRepository>();
         services.AddScoped<IPortfolioRepository, PortfolioRepository>();
