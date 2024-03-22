@@ -1,6 +1,5 @@
 ﻿using Invinitive.Application.Common.Interfaces;
 using Invinitive.Domain.Managers;
-using Invinitive.Domain.Users;
 using Invinitive.Infrastructure.Common;
 
 namespace Invinitive.Infrastructure.Users.Persistence;

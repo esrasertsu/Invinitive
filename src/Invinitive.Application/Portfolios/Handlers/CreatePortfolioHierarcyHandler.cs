@@ -6,17 +6,8 @@ using Invinitive.Domain.Managers;
 using Invinitive.Domain.Portfolios;
 using MediatR;
 
-public class CreatePortfolioHierarcyHandler : IRequestHandler<CreatePortfolioHierarchyCommand, ErrorOr<CreatePortfolioHierarchyResponse>>
+public class CreatePortfolioHierarcyHandler(IPortfolioRepository _portfolioRepository, IManagerRepository _managerRepository) : IRequestHandler<CreatePortfolioHierarchyCommand, ErrorOr<CreatePortfolioHierarchyResponse>>
 {
-    private readonly IPortfolioRepository _portfolioRepository;
-    private readonly IManagerRepository _managerRepository;
-
-    public CreatePortfolioHierarcyHandler(IPortfolioRepository portfolioRepository, IManagerRepository managerRepository)
-    {
-        _portfolioRepository = portfolioRepository;
-        _managerRepository = managerRepository;
-    }
-
     public async Task<ErrorOr<CreatePortfolioHierarchyResponse>> Handle(CreatePortfolioHierarchyCommand request, CancellationToken cancellationToken)
     {
         try
